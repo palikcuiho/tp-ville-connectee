@@ -7,6 +7,7 @@ services:
 
   frontend:
     build: ./tp-cda-street-lamp-administrator-frontend
+    ports: ['80:80']
     depends_on:
       - backend
 
@@ -20,13 +21,6 @@ services:
 
     depends_on:
       - db  
-
-  # Proxy
-
-  proxy:
-    build: ./proxy
-    ports: ['80:80']
-
 
   # db
 
