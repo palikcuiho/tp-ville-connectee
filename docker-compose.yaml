@@ -1,0 +1,42 @@
+
+name: tp-ville-connectee
+
+services:
+
+  # Frontend
+
+  frontend:
+    build: ./tp-cda-street-lamp-administrator-frontend
+    depends_on:
+      - backend
+
+  # Backend
+
+  backend:
+    build: ./tp-cda-street-lamp-administrator-backend
+    depends_on:
+      - db  
+
+  # Proxy
+
+  proxy:
+    build: ./proxy
+    ports: ['80:80']
+
+
+  # db
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    restart: always
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: root
+
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
