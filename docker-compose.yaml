@@ -13,7 +13,11 @@ services:
   # Backend
 
   backend:
-    build: ./tp-cda-street-lamp-administrator-backend
+    # build: ./tp-cda-street-lamp-administrator-backend
+    build:
+      context: ./tp-cda-street-lamp-administrator-backend
+      dockerfile: Dockerfile_bak
+
     depends_on:
       - db  
 
