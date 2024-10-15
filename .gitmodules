@@ -1,0 +1,8 @@
+[submodule "tp-cda-street-lamp-administrator-backend"]
+	path = tp-cda-street-lamp-administrator-backend
+	url = https://github.com/timothedepoorter/tp-cda-street-lamp-administrator-backend
+	branch = dev
+[submodule "tp-cda-street-lamp-administrator-frontend"]
+	path = tp-cda-street-lamp-administrator-frontend
+	url = https://github.com/timothedepoorter/tp-cda-street-lamp-administrator-frontend
+	branch = develop
